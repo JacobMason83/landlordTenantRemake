@@ -1,14 +1,15 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import SignInLogo from '../styles/images/sign-in-logo.jpg'
 const Home = () => {
 
     // const [signedIn, setSignedIn ] = useState(false)
     const [username, setUsername] = useState('')
     const [password, setPassword ] = useState('')
     return (
-      <div className="container">
-          <form  className="signInContainer">
+      <div className='container'>
+          <form className="signInContainer">
           <div className="image-wrapper">
-            <img src="https://source.unsplash.com/random/250x250" alt="signInPicture" />
+            <img src={SignInLogo} alt="signInPicture" />
           </div>
           <div className="input-wrapper">
               <input 

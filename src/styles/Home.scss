@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    .signInContainer {
+        border: 5px solid red;
+        display: flex;
+        flex-direction: column;
+        // position: absolute;
+        // transform: translate(0%, 100%);
+        height: 500px;
+        width: 500px;
+        background-color: #C5C5C5;
+        .image-wrapper{
+            text-align: center;
+        }
+        .input-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            input[type=text] {
+                margin-top: 45px;
+            }
+        }
+        .sign-btn {
+           margin-left: auto;
+           margin-right: 40px;
+           margin-top: 100px;
+            text-align: center;
+            width: 50px;
+        }
+    }
+}
