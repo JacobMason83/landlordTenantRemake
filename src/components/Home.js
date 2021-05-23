@@ -1,22 +1,58 @@
 import { useState, useEffect, Fragment } from 'react'
-import SignInLogo from '../styles/images/sign-in-logo.jpg'
-const Home = () => {
+import { auth } from '../firebase'
+import { useHistory } from 'react-router-dom'
 
+import SignInLogo from '../styles/images/sign-in-logo.jpg'
+import { useStateValue } from '../helpers/StateProvider'
+const Home = () => {
+    const [{ user }, dispatch] = useStateValue()
+    const history = useHistory()
     // const [signedIn, setSignedIn ] = useState(false)
-    const [username, setUsername] = useState('')
+    const [email, setEmail] = useState('')
     const [password, setPassword ] = useState('')
     const [landlordName, setLandlordName] = useState('')
     const [signInOrRegister, setSignInOrRegister ] = useState('signIn')
+    const login = (e) => {
+        e.preventDefault()
+        auth.signInWithEmailAndPassword(email, password)
+        .then((auth) => {   
+            // if auth is true and logged in then push to dashboard
+            dispatch({
+                type:'Set_User',
+                user: email
+            })
+            history.push('/dashboard')
+        })
+        .catch(e => {alert(e.message)
+        })
+    }
+    const register = (e) => {
+        e.preventDefault()
+        auth.createUserWithEmailAndPassword(email,password)
+        .then((auth)=> {
+            //if auth is true and user is created then 
+            //push to ./dashboard page 
+            dispatch({
+                type:'Set_User',
+                user: email
+            })
+            history.push('./dashboard')
+        })
+        .catch(e => {alert(e.message)
+        })
+    }
     const handleSubmit = () => {
         if(signInOrRegister === 'signIn'){
             // check the sign in route and push to dashboard
+            login()
         }else {
             // send to the register route and push to dashboard 
+            register()
         }
     }
     return (
       <div className='container'>
-          <form className="signInContainer" onSubmit={handleSubmit}>
+          <form className="signInContainer" onSubmit={() => handleSubmit()}>
           <div className="switch">
           <h3 onClick={() => setSignInOrRegister('signIn')} className='signIn'>Sign In</h3>
           <h3 onClick={() => setSignInOrRegister('register')} className='register'>Register</h3>
@@ -27,13 +63,13 @@ const Home = () => {
             <img src={SignInLogo} alt="signInPicture" />
           </div>
           <div className="input-wrapper">
-          <label htmlFor="username">Username
+          <label htmlFor="email">Email
               <input 
-              type="text" 
-              value={username}
-              name='username'
-              placeholder='username'
-              onChange={(e) => { setUsername(e.target.value)}}
+              type="email" 
+              value={email}
+              name='email'
+              placeholder='email'
+              onChange={(e) => { setEmail(e.target.value)}}
                />
                </label>
                <label htmlFor="password">Password
@@ -63,13 +99,13 @@ const Home = () => {
               onChange={(e) =>  setLandlordName(e.target.value)}
                />
                </label>
-          <label htmlFor="username">Username
+          <label htmlFor="email">Email
               <input 
               type="text" 
-              value={username}
-              name='username'
-              placeholder='username'
-              onChange={(e) => { setUsername(e.target.value)}}
+              value={email}
+              name='email'
+              placeholder='email'
+              onChange={(e) => { setEmail(e.target.value)}}
                />
                </label>
                <label htmlFor="password">Password

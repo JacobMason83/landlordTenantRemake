@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import { initalState, reducer } from './helpers/reducer'
+import reducer, { initalState } from './helpers/reducer'
 import { StateProvider } from './helpers/StateProvider'
 import './styles/main.scss'
 
