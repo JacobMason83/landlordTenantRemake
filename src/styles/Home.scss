@@ -7,18 +7,34 @@
     max-height: 100vh;
     width: 100%;
     height: 100vh;
-    background-color: black;
+
     .signInContainer {
-        border: 5px solid red;
+        border: 5px solid orange;
         display: flex;
         flex-direction: column;
-        // position: absolute;
-        // transform: translate(0%, 100%);
-        height: 500px;
+        height: 600px;
         width: 500px;
-        background-color: #C5C5C5;
+        background-color: #756d6d;
+        .switch {
+            display: flex;
+            flex-direction: row;
+            width: 82%;
+            margin-top: 25px;
+            margin-left: 40px;
+            .signIn {
+                font-size: 2.75em;
+                border-right: 5px solid black;
+            }
+            .register {
+                font-size: 2.74em;
+                margin-left: auto;
+                border-right: 5px solid black;
+                
+            }
+        }
         .image-wrapper{
             text-align: center;
+            margin-top: 25px;
         }
         .input-wrapper {
             display: flex;
@@ -26,15 +42,41 @@
             align-items: center;
             flex-direction: column;
             input[type=text] {
-                margin-top: 45px;
+                // margin-top: 45px;
+                border: 3px solid orange;
+                height: 25px;
             }
+            input[type=password]{
+                
+                border: 3px solid orange;
+                
+            }
+            input {
+                margin-top: 15px;
+                margin-left: 15px;
+                width: 195px;
+                height: 25px;
+                border: 3px solid orange;
+                padding: 1.3em 1.3em;
+                border-radius: 30px;
+            }
+            label {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 1.3em;
+                color: rgb(255, 157, 0)
+            }
+          
         }
         .sign-btn {
            margin-left: auto;
            margin-right: 40px;
-           margin-top: 100px;
+           margin-top: 20px;
             text-align: center;
-            width: 50px;
+            width: 100px;
+            height: 65px;
+            background-color: orange;
+            color: white;
+            border-radius: 50%;
         }
     }
 }
