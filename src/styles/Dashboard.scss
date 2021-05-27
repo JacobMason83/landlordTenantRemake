@@ -1,0 +1,33 @@
+.DashboardContainer{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    .messages {
+        position: absolute;
+        margin-top: 50px;
+        margin-right: 50px;
+        right:0;
+        
+    }
+    .payRent {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        margin-left: 35px;
+    }
+    .maitanenceRequests {
+        position: absolute;
+        top:50%;
+        right: 0;
+        margin-right: 50px;
+        margin-top: 50px;
+    }
+    .properties {
+        position: absolute;
+        top: 50%;
+        margin-left: 35px;
+        margin-top: 50px;
+        
+        
+    }
+}
