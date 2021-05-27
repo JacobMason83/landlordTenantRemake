@@ -34,7 +34,7 @@ const Home = () => {
             //push to ./dashboard page 
             dispatch({
                 type:'Set_User',
-                user: email
+                user: auth.email
             })
             history.push('./dashboard')
         })

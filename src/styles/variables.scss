@@ -1,0 +1,16 @@
+// color variables 
+$font-color: #FF8300;
+$black:#0c0c05;
+$silver: rgba(204,204,204, 0.3);
+$bg-gray:#333333;
+$daveys-gray: #474747;
+$off-white:#f2f2f2;
+$platinum:#e5e5e5;
+
+// mixins
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @content;
+};

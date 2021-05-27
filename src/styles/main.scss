@@ -1,4 +1,6 @@
+@import './variables.scss';
 @import './Home.scss';
+@import './Header.scss';
 
 
 
@@ -9,7 +11,10 @@
     padding: 0;
 }
 .App {
-    
     background-color: rgb(238, 121, 11);
     background-image: url('https://img.pngio.com/so-you-want-to-become-a-landlord-parq-realty-group-landlord-png-419_234.png');
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
 }
