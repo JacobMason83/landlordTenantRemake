@@ -1,0 +1,53 @@
+@keyframes animate {
+    0% 
+    {
+        opacity: 0;
+        filter: blur(10px);
+        transform: rotateY(90deg);
+        -webkit-transform: rotateY(90deg);
+        -moz-transform: rotateY(90deg);
+        -ms-transform: rotateY(90deg);
+        -o-transform: rotateY(90deg);
+        -webkit-filter: blur(10px);
+}
+    100% 
+    {
+        opacity: 1;
+        filter: blur(0px);
+        transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        -webkit-filter: blur(0px);
+}
+}
+@keyframes spin {
+    0% {
+        transform: scaleX(1) scaleY(1) scaleZ(0.9) rotateX(360deg) rotateY(360deg) rotateZ(deg) translateX(0px) translateY(0px) translateZ(0pxx) skewX(1deg) skewY(0deg);
+        -webkit-transform: scaleX(1) scaleY(1) scaleZ(0.9) rotateX(360deg) rotateY(360deg) rotateZ(deg) translateX(0px) translateY(0px) translateZ(0pxx) skewX(1deg) skewY(0deg);
+        -moz-transform: scaleX(1) scaleY(1) scaleZ(0.9) rotateX(360deg) rotateY(360deg) rotateZ(deg) translateX(0px) translateY(0px) translateZ(0pxx) skewX(1deg) skewY(0deg);
+        -ms-transform: scaleX(1) scaleY(1) scaleZ(0.9) rotateX(360deg) rotateY(360deg) rotateZ(deg) translateX(0px) translateY(0px) translateZ(0pxx) skewX(1deg) skewY(0deg);
+        -o-transform: scaleX(1) scaleY(1) scaleZ(0.9) rotateX(360deg) rotateY(360deg) rotateZ(deg) translateX(0px) translateY(0px) translateZ(0pxx) skewX(1deg) skewY(0deg);
+}
+
+    100% 
+    {
+        transform: scaleX(1) scaleY(1) scaleZ(0.9) rotateX(0deg) rotateY(0deg) rotateZ() translateX(0px) translateY(0px) translateZ(6px) skewX(1deg) skewY(0deg);
+        -webkit-transform: scaleX(1) scaleY(1) scaleZ(0.9) rotateX(0deg) rotateY(0deg) rotateZ() translateX(0px) translateY(0px) translateZ(6px) skewX(1deg) skewY(0deg);
+        -moz-transform: scaleX(1) scaleY(1) scaleZ(0.9) rotateX(0deg) rotateY(0deg) rotateZ() translateX(0px) translateY(0px) translateZ(6px) skewX(1deg) skewY(0deg);
+        -ms-transform: scaleX(1) scaleY(1) scaleZ(0.9) rotateX(0deg) rotateY(0deg) rotateZ() translateX(0px) translateY(0px) translateZ(6px) skewX(1deg) skewY(0deg);
+        -o-transform: scaleX(1) scaleY(1) scaleZ(0.9) rotateX(0deg) rotateY(0deg) rotateZ() translateX(0px) translateY(0px) translateZ(6px) skewX(1deg) skewY(0deg);
+}
+}
+@keyframes bg-anim {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

@@ -5,6 +5,7 @@
     background-color: $bg-gray;
     color: $font-color;
     opacity: 0.91;
+    z-index: -1;
     
     .nav-wrapper{
         @include flex();
